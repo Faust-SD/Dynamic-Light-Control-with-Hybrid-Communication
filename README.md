@@ -6,7 +6,7 @@
 
 ## 项目特性
 
-1. 使用Arduino和ESP8266WiFi开发板，通过光敏电阻读取环境光线。
+1. 使用Arduino和ESP8266开发板，通过光敏电阻读取环境光线。
 2. 通过UDP和串行通信将环境光线数据传送至Unity应用程序。
 3. Unity应用程序接收光线数据并动态调整场景光照。
 4. 利用卡尔曼滤波进行数据平滑处理，更加逼真地模拟真实环境光照变化。
@@ -16,9 +16,11 @@
 
 克隆或下载本项目，然后按照以下步骤进行操作：
 
-1. 将Arduino代码上传到ESP8266WiFi开发板。
-2. 在Unity中打开项目并运行。
-3. 调整场景和物理设备以观察光照变化。
+1. 将Arduino代码上传到ESP8266开发板。
+2. 在Unity3D中打开项目。
+3. 打开 "DemoScene" 场景。
+4. 在Unity3D中运行项目
+5. 调整场景和物理设备以观察光照变化。
 
 ## 贡献
 
@@ -31,7 +33,7 @@ Dynamic Light Control with Hybrid Communication is an open source project that r
 
 ## Features
 
-1. Reads ambient light with an Arduino and ESP8266WiFi board using a photoresistor.
+1. Reads ambient light with an Arduino and ESP8266 board using a photoresistor.
 2. Transmits the light data to a Unity application via UDP and Serial communication.
 3. The Unity application receives the light data and dynamically adjusts the scene lighting.
 4. Uses Kalman filtering for smooth data handling, simulating realistic ambient light changes more convincingly.
@@ -41,9 +43,11 @@ Dynamic Light Control with Hybrid Communication is an open source project that r
 
 Clone or download this project and then follow these steps:
 
-1. Upload the Arduino code to the ESP8266WiFi board.
-2. Open the project in Unity and run.
-3. Adjust the scene and physical device to observe the lighting changes.
+1. Upload the Arduino code to the ESP8266 board.
+2. Open the project in Unity3D.
+3. Open the "DemoScene" scene.
+4. Run the project in Unity3D.
+5. Adjust the scene and physical device to observe the lighting changes.
 
 ## Contribution
 
