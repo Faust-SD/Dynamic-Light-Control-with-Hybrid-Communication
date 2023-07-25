@@ -27,6 +27,7 @@ public class LightController : MonoBehaviour
     {
         if (dataReaders.dataQueue.TryDequeue(out float result))
         {
+            result = Mathf.SmoothStep(0, 24, result / 1023.0f);
             timeOfDay = result;
         }
         UpdateTime();

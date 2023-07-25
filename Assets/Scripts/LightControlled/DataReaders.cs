@@ -24,8 +24,8 @@ public class DataReaders : MonoBehaviour
     public ConcurrentQueue<float> dataQueue = new ConcurrentQueue<float>();
 
     private string serialPortName = "COM3";
-    private int baudRate = 115200;
-    private int udpPort = 8000;
+    public int baudRate = 115200;
+    public int udpPort = 8000;
     [SerializeField]
     public List<CommunicationType> communicationTypesPriority = new List<CommunicationType>() { CommunicationType.Serial, CommunicationType.UDP };
     private CommunicationType currentType;
@@ -71,9 +71,9 @@ public class DataReaders : MonoBehaviour
                     while (true)
                     {
                         string data = serialPort.ReadLine();
-                        if (int.TryParse(data.Trim(), out int photoResistorValue))
+                        if (int.TryParse(data.Trim(), out int Out))
                         {
-                            dataQueue.Enqueue(Mathf.SmoothStep(0, 24, photoResistorValue / 1023.0f));
+                            dataQueue.Enqueue(Out);
                         }
                     }
                 }
@@ -108,9 +108,9 @@ public class DataReaders : MonoBehaviour
                     {
                         byte[] data = udpClient.Receive(ref anyIP);
                         string text = Encoding.UTF8.GetString(data);
-                        if (int.TryParse(text.Trim(), out int photoResistorValue))
+                        if (int.TryParse(text.Trim(), out int Out))
                         {
-                            dataQueue.Enqueue(Mathf.SmoothStep(0, 24, photoResistorValue / 1023.0f));
+                            dataQueue.Enqueue(Out);
                         }
                     }
                 }
