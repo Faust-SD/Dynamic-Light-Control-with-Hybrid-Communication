@@ -23,7 +23,7 @@ public class DataReaders : MonoBehaviour
     private UdpClient udpClient;
     public ConcurrentQueue<float> dataQueue = new ConcurrentQueue<float>();
 
-    private string serialPortName = "COM3";
+    public string serialPortName = "COM3";
     public int baudRate = 115200;
     public int udpPort = 8000;
     [SerializeField]
