@@ -19,7 +19,7 @@ public class LightController : MonoBehaviour
 
     void Start()
     {
-        dataReaders = GetComponent<DataReaders>();
+        //dataReaders = GetComponent<DataReaders>();
         skyVolume.profile.TryGet(out sky);
     }
 
