@@ -58,7 +58,7 @@ public class LightController : MonoBehaviour
     private void UpdateSkyColor()
     {
         float alpha = timeOfDay / 24.0f;
-        sky.spaceEmissionMultiplier.value = starsCurve.Evaluate(alpha) * 5.0f;
+        sky.spaceEmissionMultiplier.value = starsCurve.Evaluate(alpha);
     }
 
     private void DayNight()

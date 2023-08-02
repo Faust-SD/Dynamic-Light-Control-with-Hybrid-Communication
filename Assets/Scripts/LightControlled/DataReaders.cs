@@ -1,3 +1,13 @@
+/*
+文件名: DataReaders.cs
+作者: Faust-SD
+联系方式: 2950068710z@gmail.com
+个人空间: https://space.bilibili.com/179771012
+日期: Created on Tue Aug  2 00:00:01 2023
+版本: v1.0.1
+版权所有: (C) Copyright 2023 Faust-SD, All Rights Reserved.
+许可协议: MIT License
+*/
 using System.IO;
 using System.IO.Ports;
 using System.Net;
